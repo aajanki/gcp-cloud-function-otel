@@ -1,0 +1,12 @@
+gcloud functions deploy trace-sample \
+  --gen2 \
+  --runtime=nodejs20 \
+  --region=europe-north1 \
+  --source=. \
+  --entry-point=helloWorld \
+  --trigger-http \
+  --memory=256Mi \
+  --cpu=1 \
+  --concurrency=20 \
+  --set-env-vars=NODE_OPTIONS="--require ./src/opentelemetry.js",LOG_TARGET=gcp,OTEL_NODE_RESOURCE_DETECTORS=all\
+  --allow-unauthenticated

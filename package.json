@@ -1,0 +1,21 @@
+{
+  "name": "cloud-function-trace-sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "functions-framework --source=src --target=helloWorld"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/functions-framework": "^3.4.2",
+    "@google-cloud/logging": "^11.2.0",
+    "@google-cloud/opentelemetry-cloud-trace-exporter": "^2.4.1",
+    "@opentelemetry/api": "^1.9.0",
+    "@opentelemetry/auto-instrumentations-node": "^0.50.0",
+    "@opentelemetry/instrumentation-express": "^0.42.0",
+    "@opentelemetry/instrumentation-http": "^0.53.0"
+  }
+}
