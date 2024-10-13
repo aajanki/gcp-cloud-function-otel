@@ -14,10 +14,12 @@ By default, traces are printed to stdout. Define environment variable `LOG_TARGE
 In another terminal tab:
 
 ```sh
-curl http://localhost:8080/helloWorld
+curl http://localhost:8080/otel
 ```
 
 ## Deployment
+
+First, install [gcloud CLI](https://cloud.google.com/sdk/gcloud/) and login. Then, do:
 
 ```sh
 ./deploy.sh

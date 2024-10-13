@@ -7,6 +7,7 @@ const { NodeTracerProvider, ConsoleSpanExporter } = require('@opentelemetry/sdk-
 const { registerInstrumentations } = require('@opentelemetry/instrumentation');
 const { HttpInstrumentation } = require('@opentelemetry/instrumentation-http');
 const { ExpressInstrumentation } = require('@opentelemetry/instrumentation-express');
+const { FetchInstrumentation } = require('opentelemetry-instrumentation-fetch-node');
 
 const providerConfig = {
   resource: new Resource({
@@ -33,6 +34,7 @@ registerInstrumentations({
       ignoreLayersType: ['middleware']
     }),
     new HttpInstrumentation(),
+    new FetchInstrumentation(),
   ],
 });
 

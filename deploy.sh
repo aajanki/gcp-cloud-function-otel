@@ -3,7 +3,7 @@ gcloud functions deploy trace-sample \
   --runtime=nodejs20 \
   --region=europe-north1 \
   --source=. \
-  --entry-point=helloWorld \
+  --entry-point=otel \
   --trigger-http \
   --memory=256Mi \
   --cpu=1 \
