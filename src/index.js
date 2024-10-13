@@ -1,6 +1,5 @@
 const functions = require('@google-cloud/functions-framework');
 const { Logging } = require('@google-cloud/logging');
-const api = require('@opentelemetry/api');
 const https = require('https');
 
 const logging = new Logging();
