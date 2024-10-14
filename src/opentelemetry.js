@@ -42,4 +42,6 @@ registerInstrumentations({
 // Unclear whether cloud functions actually send SIGTERM.
 process.on('SIGTERM', async () => {
   await provider.shutdown();
+
+  process.exit(0);
 });
